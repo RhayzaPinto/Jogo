@@ -109,30 +109,31 @@ opcoes_13 = 'Opção a: Dispensar o paciente. \nOpção b: Encaminhar para medic
 opcoes_14 = 'Opção a: Dispensar o paciente. \nOpção b: Trocar medicação. \nOpção c: Encaminhar para cirurgia.'
 
 if personagem == 'a':
+    aux = 1
     fase(ambientacao, historia, texto_para_escolha, opcoes_1)
     fase_2 = escolha()
     
     if fase_2 == 'a':
-        fase (resultado_exame, '', texto_para_escolha, opcoes_2)
+        fase ( '', resultado_exame,texto_para_escolha, opcoes_2)
         fase_3 = escolha()
         
         if fase_3 == 'a':
-            fase (evolucao_observacao, '', texto_para_escolha, opcoes_3)                
+            fase ( '', evolucao_observacao,texto_para_escolha, opcoes_3)                
             fase_final(escolha())
         
         elif fase_3 == 'b':
-            fase(evolucao_medicacao, '', texto_para_escolha, opcoes_4)                
+            fase( '', evolucao_medicacao,texto_para_escolha, opcoes_4)                
             fase_final(escolha())
         
         else:
             fase_final('a')
     
     elif fase_2 == 'b':
-        fase(evolucao_medicacao, '', texto_para_escolha, opcoes_5)            
+        fase( '', evolucao_medicacao,texto_para_escolha, opcoes_5)            
         fase_3 = escolha()
         
         if fase_3 == 'a':
-            fase(evolucao_observacao, '', texto_para_escolha, opcoes_6)                
+            fase( '', evolucao_observacao,texto_para_escolha, opcoes_6)                
             fase_final(escolha())
         
         elif fase_3 == 'c':
@@ -149,7 +150,7 @@ elif personagem == 'b':
     fase_2 = escolha()
     
     if fase_2 == 'a':
-        fase(resultado_exame, '', texto_para_escolha, opcoes_8)            
+        fase( '', resultado_exame,texto_para_escolha, opcoes_8)            
         fase_3 = escolha()
         
         if fase_3 == 'a':
@@ -163,11 +164,11 @@ elif personagem == 'b':
             fase_final('a')
     
     elif fase_2 == 'b':
-        fase(evolucao_medicacao, '', texto_para_escolha, opcoes_1)
+        fase( '', evolucao_medicacao,texto_para_escolha, opcoes_1)
         fase_3 = escolha()
         
         if fase_3 == 'a':
-            fase(resultado_exame, '', texto_para_escolha, opcoes_10)
+            fase( '', resultado_exame,texto_para_escolha, opcoes_10)
             fase_final(escolha())
         
         elif fase_3 == 'b':
@@ -179,28 +180,28 @@ elif personagem == 'b':
     else:
         fase_final('b')
 
-else:
+elif personagem == 'c':
         fase(ambientacao, historia, texto_para_escolha, opcoes_1)        
         fase_2 = escolha()
         
         if fase_2 == 'a':
-            fase(resultado_exame, '', texto_para_escolha, opcoes_11)            
+            fase( '', resultado_exame,texto_para_escolha, opcoes_11)            
             fase_3 = escolha()
             
             if fase_3 == 'a':
-                fase(evolucao_observacao, '', texto_para_escolha, opcoes_12)
+                fase( '', evolucao_observacao,texto_para_escolha, opcoes_12)
                 fase_final(escolha())
             
             elif fase_3 == 'b':
-                fase(evolucao_medicacao, '', texto_para_escolha, opcoes_13)                
+                fase( '', evolucao_medicacao,texto_para_escolha, opcoes_13)                
                 fase_final(escolha())
             
             else:
                 fase_final('a')
         
         elif fase_2 == 'b':
-            fase(evolucao_medicacao, '', texto_para_escolha, opcoes_14)
+            fase( '', evolucao_medicacao,texto_para_escolha, opcoes_14)
             fase_final(escolha())            
         
         else:
-            fase_final('a')
+            fase_final('a')          
