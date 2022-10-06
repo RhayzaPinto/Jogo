@@ -5,3 +5,6 @@ Jogo textual de escolhas.
 
 
 teste2
+
+
+teste3
